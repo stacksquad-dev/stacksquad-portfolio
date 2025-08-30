@@ -4,10 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Portfolio - Tech Experts</title>
+
+    <!-- SEO Meta Tags -->
+    <title>StackSquad - Expert Mobile App & Full Stack Development Team</title>
+    <meta name="description"
+        content="StackSquad delivers innovative mobile apps, full-stack solutions, and AI-powered applications. Expert team with 12+ years experience. Get your project started today.">
+    <meta name="author" content="StackSquad">
+    <link rel="canonical" href="https://stacksquad.dev/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stacksquad.dev/">
+    <meta property="og:title" content="StackSquad - Expert Mobile App & Full Stack Development Team">
+    <meta property="og:description"
+        content="Transform your ideas into powerful digital solutions with our expert team. Mobile apps, web applications, and AI solutions.">
+    <!-- TODO: Create og-image.png file -->
+    <meta property="og:image" content="https://stacksquad.dev/assets/imgs/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://stacksquad.dev/">
+    <meta property="twitter:title" content="StackSquad - Expert Mobile App & Full Stack Development Team">
+    <meta property="twitter:description"
+        content="Transform your ideas into powerful digital solutions with our expert team. Mobile apps, web applications, and AI solutions.">
+    <!-- TODO: Create og-image.png file -->
+    <meta property="twitter:image" content="https://stacksquad.dev/assets/imgs/og-image.png">
+
+    <!-- Favicon -->
+    <!-- TODO: Create favicon.ico and apple-touch-icon.png files -->
+    <link rel="icon" type="image/x-icon" href="assets/imgs/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/apple-touch-icon.png">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="styles.css" as="style">
+
+    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "StackSquad",
+      "description": "Expert Mobile App & Full Stack Development Team",
+      "url": "https://stacksquad.dev",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-89809-31086",
+        "contactType": "customer service",
+        "email": "hareshkalyani16@gmail.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ahmedabad",
+        "addressCountry": "India"
+      },
+      "sameAs": []
+    }
+    </script>
 </head>
 
 <body>
@@ -17,7 +75,8 @@
             <a class="navbar-brand" href="#home">
                 <span class="brand-text">StackSquad</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -78,7 +137,7 @@
                             </div>
 
                             <div class="orbit-element orbit-2"
-                                style="position: absolute; width: 60px; height: 60px; background: linear-gradient(135deg, rgba(0, 188, 212, 0.8), rgba(139, 195, 74, 0.8)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3); animation: orbit 8s linear infinite reverse;">
+                                style="position: absolute; width: 60px; height: 60px; background: linear-gradient(135deg, rgba(0, 188, 212, 0.8), rgba(139, 195, 74, 0.8)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3); animation: orbit-reverse 8s linear infinite;">
                                 <i class="fas fa-mobile-alt" style="color: white;"></i>
                             </div>
 
@@ -151,12 +210,11 @@
                         </div>
                         <h3>Sudhanshu Sharma</h3>
                         <p class="team-role">Solution Architect </p>
-                        <p class="team-description">Sudhanshu is an experienced tech lead with 10+ years in designing
-                            and delivering scalable web applications. Skilled in backend, frontend, databases, and REST
-                            API integration with a strong focus on
-                            system architecture and performance. Leads cross-functional teams to build secure,
-                            high-quality solutions tailored to
-                            diverse business needs.</p>
+                        <p class="team-description">Results-driven Tech Lead with 11+ years of expertise in crafting
+                            scalable, high-performance web applications. Proficient across backend, frontend, and
+                            database development, with deep experience in cloud platforms, Docker, and Kubernetes.
+                            Recognized for architecting secure, efficient systems and leading cross-functional teams to
+                            deliver exceptional, business-driven solutions.</p>
                         <div class="team-skills">
                             <span class="skill-tag">.NET</span>
                             <span class="skill-tag">SQL Server / MYSQL</span>
@@ -315,6 +373,10 @@
                                 class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"
                                 aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
                         </div>
                         <div class="carousel-inner">
                             <!-- Slide 1 -->
@@ -381,30 +443,12 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                             <!-- Slide 2 -->
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-6 mb-4">
-                                        <div class="portfolio-card">
-                                            <div class="portfolio-image">
-                                                <img src="assets/imgs/skilletnow.png" alt="SkilletNow">
-                                            </div>
-                                            <div class="portfolio-content">
-                                                <h5>SkilletNow</h5>
-                                                <p>SkilletNow is a takeaway restaurant app that allows users to place
-                                                    and pay for food orders from participating Skillet restaurants.
-                                                    Customers can set a pick-up time for the food and can collect it
-                                                    whenever is convenient for them.</p>
-                                                <div class="portfolio-tags">
-                                                    <span class="tag">iOS</span>
-                                                    <span class="tag">Android</span>
-                                                    <span class="tag">Mobile</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="portfolio-card">
                                             <div class="portfolio-image">
@@ -433,6 +477,131 @@
                                                 <p>Youfie is the new way to take a picture anonymously and leave it
                                                     where you took it for others to view. The beauty is that it is
                                                     completely anonymous.</p>
+                                                <div class="portfolio-tags">
+                                                    <span class="tag">iOS</span>
+                                                    <span class="tag">Android</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="portfolio-card">
+                                            <div class="portfolio-image">
+                                                <img src="assets/imgs/skilletnow.png" alt="SkilletNow">
+                                            </div>
+                                            <div class="portfolio-content">
+                                                <h5>SkilletNow</h5>
+                                                <p>SkilletNow is a takeaway restaurant app that allows users to place
+                                                    and pay for food orders from participating Skillet restaurants.
+                                                    Customers can set a pick-up time for the food and can collect it
+                                                    whenever is convenient for them.</p>
+                                                <div class="portfolio-tags">
+                                                    <span class="tag">iOS</span>
+                                                    <span class="tag">Android</span>
+                                                    <span class="tag">Mobile</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="portfolio-card">
+                                            <div class="portfolio-image">
+                                                <div
+                                                    style="width: 100%; height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                                    <i class="fas fa-calendar-alt"></i>
+                                                </div>
+                                            </div>
+                                            <div class="portfolio-content">
+                                                <h5>⁠Ventla</h5>
+                                                <p>Ventla is an experience-enhancing platform that improves real time
+                                                    information flow, creates dynamic interactions, connects brands with
+                                                    their audience and attendees with attendees through a medium of
+                                                    In-Person, Virtual and Hybrid events
+                                                </p>
+                                                <div class="portfolio-tags">
+                                                    <span class="tag">iOS</span>
+                                                    <span class="tag">Android</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="portfolio-card">
+                                            <div class="portfolio-image">
+                                                <div
+                                                    style="width: 100%; height: 200px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                                    <i class="fas fa-wallet"></i>
+                                                </div>
+                                            </div>
+                                            <div class="portfolio-content">
+                                                <h5>⁠ET Money</h5>
+                                                <p>ET Money automatically aggregates all Expenses in one place. It goes
+                                                    to the next level and arranges expenses under respective categories
+                                                    such as food, travel, shopping, entertainment etc. All of this
+                                                    happens without any manual input and there is no need for you to put
+                                                    any bank passwords or upload credit card statements. It acts as your
+                                                    Personal Expense Manager. It also act as your Personal guide to
+                                                    Invest in Mutual Fund, SIP, Lumpsum etc displaying their current
+                                                    Market value and other Details.
+                                                </p>
+                                                <div class="portfolio-tags">
+                                                    <span class="tag">iOS</span>
+                                                    <span class="tag">Android</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="portfolio-card">
+                                            <div class="portfolio-image">
+                                                <div
+                                                    style="width: 100%; height: 200px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                                    <i class="fas fa-home"></i>
+                                                </div>
+                                            </div>
+                                            <div class="portfolio-content">
+                                                <h5>MagicBricks</h5>
+                                                <p>MagicBricks Android Property Search Mobile App has detailed property
+                                                    listings and latest information about new projects in India. Users
+                                                    can visually explore apartments, flats, builder floors, commercial
+                                                    offices, shops through rich photos, attractive videos, interactive
+                                                    maps and many other details for properties in India.
+                                                    Domain :- Real Estate
+                                                </p>
+                                                <div class="portfolio-tags">
+                                                    <span class="tag">iOS</span>
+                                                    <span class="tag">Android</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="portfolio-card">
+                                            <div class="portfolio-image">
+                                                <div
+                                                    style="width: 100%; height: 200px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                                    <i class="fas fa-store"></i>
+                                                </div>
+                                            </div>
+                                            <div class="portfolio-content">
+                                                <h5>Samsung VM Deployment</h5>
+                                                <p>Visual merchandise is the presentation of an Outlet and its
+                                                    merchandise in such a manner that will attract the attention of
+                                                    potential customers. Mobile application for this guides the
+                                                    merchandiser to deploy the merchandise in an appropriate manner.
+                                                    Domain :- Merchandising
+                                                </p>
                                                 <div class="portfolio-tags">
                                                     <span class="tag">iOS</span>
                                                     <span class="tag">Android</span>
@@ -522,13 +691,6 @@
                     <h5>StackSquad</h5>
                     <p>Expert team delivering innovative solutions with cutting-edge technology and exceptional client
                         communication.</p>
-                    <!-- Need to create profile in future on LinkeIn -->
-                    <!-- <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div> -->
                 </div>
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h6>Services</h6>
@@ -550,11 +712,18 @@
             <hr>
             <div class="row">
                 <div class="col-12 text-center">
-                    <p>&copy; 2025 StackSquad. All rights reserved.</p>
+                    <p>&copy;
+                        <script>document.write(new Date().getFullYear());</script> StackSquad. All rights reserved.
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

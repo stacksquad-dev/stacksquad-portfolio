@@ -228,6 +228,16 @@ body {
     }
 }
 
+@keyframes orbit-reverse {
+    0% {
+        transform: rotate(0deg) translateX(80px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg) translateX(80px) rotate(360deg);
+    }
+}
+
 /* Section Styles */
 .section-title {
     font-size: 2.5rem;
@@ -627,6 +637,71 @@ body {
     line-height: 1.6;
 }
 
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-cyan), var(--primary-lime));
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, var(--primary-cyan), var(--primary-lime));
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top.show {
+    display: flex;
+}
+
 /* Portfolio Section */
 .portfolio-section {
     padding: 5rem 0;
@@ -834,6 +909,104 @@ body {
     margin-right: 0.5rem;
 }
 
+/* Portfolio Carousel Styles */
+#portfolioCarousel {
+    position: relative;
+    padding: 0 20px;
+}
+
+#portfolioCarousel .carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#portfolioCarousel .carousel-item {
+    padding: 20px 0;
+}
+
+#portfolioCarousel .carousel-control-prev,
+#portfolioCarousel .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(10, 25, 47, 0.8);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+}
+
+#portfolioCarousel .carousel-control-prev {
+    left: -25px;
+}
+
+#portfolioCarousel .carousel-control-next {
+    right: -25px;
+}
+
+#portfolioCarousel .carousel-control-prev-icon,
+#portfolioCarousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+#portfolioCarousel .carousel-indicators {
+    bottom: -40px;
+}
+
+#portfolioCarousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-cyan);
+    border: 2px solid var(--primary-lime);
+    margin: 0 5px;
+}
+
+#portfolioCarousel .carousel-indicators button.active {
+    background-color: var(--primary-lime);
+}
+
+/* Mobile Responsive for Carousel */
+@media (max-width: 768px) {
+    #portfolioCarousel .carousel-item .row {
+        flex-direction: column;
+    }
+
+    #portfolioCarousel .carousel-item .col-lg-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #portfolioCarousel .carousel-control-prev,
+    #portfolioCarousel .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    #portfolioCarousel .carousel-control-prev {
+        left: -20px;
+    }
+
+    #portfolioCarousel .carousel-control-next {
+        right: -20px;
+    }
+}
+
+@media (max-width: 576px) {
+    #portfolioCarousel {
+        padding: 0 10px;
+    }
+
+    #portfolioCarousel .carousel-control-prev,
+    #portfolioCarousel .carousel-control-next {
+        display: none;
+    }
+
+    #portfolioCarousel .carousel-indicators {
+        bottom: -30px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
@@ -880,6 +1053,36 @@ body {
 
     .portfolio-content {
         padding: 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
     }
 }
 

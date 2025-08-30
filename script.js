@@ -141,24 +141,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Typing effect for hero title
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const text = heroTitle.textContent;
-        heroTitle.textContent = '';
-        let i = 0;
+    // Typing effect for hero title - REMOVED
+    // const heroTitle = document.querySelector('.hero-title');
+    // if (heroTitle) {
+    //     const text = heroTitle.textContent;
+    //     heroTitle.textContent = '';
+    //     let i = 0;
 
-        function typeWriter() {
-            if (i < text.length) {
-                heroTitle.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        }
+    //     function typeWriter() {
+    //         if (i < text.length) {
+    //             heroTitle.textContent += text.charAt(i);
+    //             i++;
+    //             setTimeout(typeWriter, 100);
+    //         }
+    //     }
 
-        // Start typing effect after a short delay
-        setTimeout(typeWriter, 500);
-    }
+    //     // Start typing effect after a short delay
+    //     setTimeout(typeWriter, 500);
+    // }
 
     // Counter animation for statistics (if needed)
     function animateCounter(element, target, duration = 2000) {
@@ -190,20 +190,46 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Mobile menu toggle
     const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navbarNav = document.querySelector('#navbarNav');
 
-    if (navbarToggler && navbarCollapse) {
+    if (navbarToggler && navbarNav) {
         navbarToggler.addEventListener('click', () => {
-            navbarCollapse.classList.toggle('show');
+            navbarNav.classList.toggle('show');
         });
 
         // Close mobile menu when clicking on a link
         const mobileNavLinks = document.querySelectorAll('.navbar-nav .nav-link');
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
-                navbarCollapse.classList.remove('show');
+                navbarNav.classList.remove('show');
             });
         });
+    }
+
+    // Back to top button
+    const backToTopButton = document.getElementById('backToTop');
+    if (backToTopButton) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Set dynamic copyright year
+    const copyrightYear = document.querySelector('.footer p');
+    if (copyrightYear && copyrightYear.textContent.includes('2025')) {
+        const currentYear = new Date().getFullYear();
+        copyrightYear.textContent = copyrightYear.textContent.replace('2025', currentYear);
     }
 });
 
@@ -265,18 +291,7 @@ function showNotification(message, type = 'info') {
     }, 5000);
 }
 
-// Preloader (optional)
-window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 500);
-    }
-});
-
-// Add CSS for active nav link
+// Add CSS for active nav link and notifications
 const style = document.createElement('style');
 style.textContent = `
     .nav-link.active {
