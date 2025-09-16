@@ -662,15 +662,15 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <form class="contact-form">
+                                <form method="POST" action="https://contact-email.stacksquad-dev.workers.dev">
                                     <div class="mb-3">
-                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                                     </div>
                                     <div class="mb-3">
-                                        <textarea class="form-control" rows="4" placeholder="Project Description"
+                                        <textarea class="form-control" name="message" rows="4" placeholder="Project Description"
                                             required></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-primary w-100">Get Set Go!</button>
